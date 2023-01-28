@@ -1,0 +1,46 @@
+﻿@model List<TeamMember>
+
+@{
+    int counter = 0;
+}
+
+<div class="container">
+
+    <div style="justify-content:space-between; display: flex">
+        <div><h2>Team members index</h2></div>
+        <div><a class="btn btn-primary" asp-controller="team" asp-action="create">Create</a></div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Position</th>
+                <th scope="col">About</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(TeamMember teamMember in Model)
+            {
+                counter += 1;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@teamMember.Id</td>
+                    <td>@teamMember.Name</td>
+                    <td>@teamMember.Surname</td>
+                    <td>@teamMember.Position.Name</td>
+                    <td>@teamMember.About</td>
+                    <td><img style="width: 90px; height: 90px" src="~/uploads/teammembers/@teamMember.ImageName" /></td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="team" asp-action="edit" asp-route-id="@teamMember.Id">Edit</a>
+                        <a class="btn btn-danger" asp-controller="team" asp-action="delete" asp-route-id="@teamMember.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

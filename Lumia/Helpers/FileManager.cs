@@ -12,7 +12,7 @@
 
             string savingRoot = Path.Combine(root, folder, fileName);
 
-            using(FileStream fileStream = new FileStream(fileName, FileMode.Create))
+            using(FileStream fileStream = new FileStream(savingRoot, FileMode.Create))
             {
                 imageFile.CopyTo(fileStream);
             }

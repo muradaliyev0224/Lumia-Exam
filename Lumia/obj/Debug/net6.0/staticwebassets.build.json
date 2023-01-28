@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SJBC/xrWpp70YLvKi0mwWxfb77S20661uWSQHXR1Hg8=",
+  "Hash": "M4wYlRTXCFm5RHwSGaZnz4b5wZ/wqRmRas65qswmePI=",
   "Source": "Lumia",
   "BasePath": "_content/Lumia",
   "Mode": "Default",
@@ -33284,6 +33284,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\vendor\\jquery-easing\\jquery.easing.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\uploads\\teammembers\\13e4c912-7aec-43a5-8c2b-422fbfe9f827team-3.jpg",
+      "SourceId": "Lumia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\",
+      "BasePath": "_content/Lumia",
+      "RelativePath": "uploads/teammembers/13e4c912-7aec-43a5-8c2b-422fbfe9f827team-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teammembers\\13e4c912-7aec-43a5-8c2b-422fbfe9f827team-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\uploads\\teammembers\\aa95b453-e6b4-488f-9666-9fcca88293d2team-1.jpg",
+      "SourceId": "Lumia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\",
+      "BasePath": "_content/Lumia",
+      "RelativePath": "uploads/teammembers/aa95b453-e6b4-488f-9666-9fcca88293d2team-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teammembers\\aa95b453-e6b4-488f-9666-9fcca88293d2team-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\uploads\\teammembers\\b7295aa9-d0af-4a24-9e95-ecef2413fad1team-2.jpg",
+      "SourceId": "Lumia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muradali\\Desktop\\Training\\LumiaMain\\Lumia\\wwwroot\\",
+      "BasePath": "_content/Lumia",
+      "RelativePath": "uploads/teammembers/b7295aa9-d0af-4a24-9e95-ecef2413fad1team-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teammembers\\b7295aa9-d0af-4a24-9e95-ecef2413fad1team-2.jpg"
     }
   ]
 }

@@ -1,0 +1,39 @@
+﻿@model List<Position>
+
+@{
+    int counter = 0;
+}
+
+<div class="container">
+
+    <div style="justify-content:space-between; display: flex">
+        <div><h2>Positions index</h2></div>
+        <div><a class="btn btn-primary" asp-controller="position" asp-action="create">Create</a></div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Position position in Model)
+            {
+                counter += 1;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@position.Id</td>
+                    <td>@position.Name</td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="position" asp-action="edit" asp-route-id="@position.Id">Edit</a>
+                        <a class="btn btn-danger" asp-controller="position" asp-action="delete" asp-route-id="@position.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
