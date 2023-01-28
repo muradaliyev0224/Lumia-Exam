@@ -6,6 +6,7 @@
         {
             this.AddRange(values);
             TotalPageCount = (int)Math.Ceiling((double)count / pageSize);
+            ActivePage = page;
         }
 
         public int TotalPageCount { get; set; }

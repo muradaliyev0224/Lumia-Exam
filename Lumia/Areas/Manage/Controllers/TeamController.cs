@@ -1,12 +1,15 @@
 ﻿using Lumia.DataContext;
 using Lumia.Helpers;
 using Lumia.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Lumia.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles = "Admin")]
     public class TeamController : Controller
     {
         private readonly LumiaDbContext _lumiaDbContext;
@@ -18,11 +21,13 @@ namespace Lumia.Areas.Manage.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            List<TeamMember> members = _lumiaDbContext.TeamMembers.Include(x => x.Position).ToList();
+            var query = _lumiaDbContext.TeamMembers.Include(x => x.Position).AsQueryable();
 
-            return View(members);
+            var paginatedTeamMembers = PaginatedList<TeamMember>.Create(query, 2, page);
+
+            return View(paginatedTeamMembers);
         }
 
         public IActionResult Create()

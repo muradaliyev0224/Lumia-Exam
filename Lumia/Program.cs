@@ -1,5 +1,6 @@
 using Lumia.DataContext;
 using Lumia.Models;
+using Lumia.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
 
     option.User.RequireUniqueEmail = false;
 }).AddEntityFrameworkStores<LumiaDbContext>().AddDefaultTokenProviders();
+builder.Services.AddScoped<MemberService>();
 
 var app = builder.Build();
 

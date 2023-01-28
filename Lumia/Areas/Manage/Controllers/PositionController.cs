@@ -1,10 +1,13 @@
 ﻿using Lumia.DataContext;
 using Lumia.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Lumia.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles = "Admin")]
     public class PositionController : Controller
     {
         private readonly LumiaDbContext _lumiaDbContext;
