@@ -1,0 +1,38 @@
+﻿@model List<Settings>
+
+@{
+    int counter = 0;
+}
+
+<div class="container">
+
+    <div style="justify-content:space-between; display: flex">
+        <div><h2>Settings index</h2></div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Key</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Settings setting in Model)
+            {
+                counter += 1;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@setting.Id</td>
+                    <td>@setting.Key</td>
+                    <td>@setting.Value</td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="settings" asp-action="edit" asp-route-id="@setting.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

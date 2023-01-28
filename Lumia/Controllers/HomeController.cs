@@ -1,32 +1,23 @@
-﻿using Lumia.Models;
+﻿using Lumia.DataContext;
+using Lumia.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Lumia.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly LumiaDbContext _lumiaDbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(LumiaDbContext lumiaDbContext)
         {
-            _logger = logger;
+            _lumiaDbContext = lumiaDbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(_lumiaDbContext.TeamMembers.Include(x => x.Position).ToList());
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿@model Settings
+
+<div class="container">
+    <form method="post" asp-action="edit">
+        <div class="mb-3">
+            <label asp-for="Key" class="form-label">Key</label>
+            <input value="@Model.Key" readonly class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Value" class="form-label">Value</label>
+            <input asp-for="Value" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>

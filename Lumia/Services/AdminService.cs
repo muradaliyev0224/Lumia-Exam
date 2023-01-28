@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Lumia.Services
 {
-    public class MemberService
+    public class AdminService
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public MemberService(UserManager<AppUser> userManager, IHttpContextAccessor httpContextAccessor)
+        public AdminService(UserManager<AppUser> userManager, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _httpContextAccessor = httpContextAccessor;

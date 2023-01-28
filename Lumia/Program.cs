@@ -22,7 +22,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
 
     option.User.RequireUniqueEmail = false;
 }).AddEntityFrameworkStores<LumiaDbContext>().AddDefaultTokenProviders();
-builder.Services.AddScoped<MemberService>();
+builder.Services.AddScoped<AdminService>();
+builder.Services.AddScoped<SettingsService>();
 
 var app = builder.Build();
 

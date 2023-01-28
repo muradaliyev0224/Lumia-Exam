@@ -11,5 +11,6 @@ namespace Lumia.DataContext
         public DbSet<Position> Positions { get; set; }
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<Settings> Settings { get; set; }
     }
 }
